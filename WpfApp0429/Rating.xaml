@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="WpfApp0429.Rating"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp0429"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="770"
+             Name="RatingControl">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Grid.Row="0"
+            Orientation="Horizontal"
+            Background="{Binding ElementName=RatingControl,Path=Background}">
+            <Button Name="Button1" Background="Transparent" Click="Button_Click">
+                <Image Name="image1" Source="Images/emptystar.png" Width="150"></Image>
+            </Button>
+            <Button Name="Button2" Background="Transparent" Click="Button_Click">
+                <Image Name="image2" Source="Images/emptystar.png" Width="150"></Image>
+            </Button>
+            <Button Name="Button3" Background="Transparent" Click="Button_Click">
+                <Image Name="image3" Source="Images/emptystar.png" Width="150"></Image>
+            </Button>
+            <Button Name="Button4" Background="Transparent" Click="Button_Click">
+                <Image Name="image4" Source="Images/emptystar.png" Width="150"></Image>
+            </Button>
+            <Button Name="Button5" Background="Transparent" Click="Button_Click">
+                <Image Name="image5" Source="Images/emptystar.png" Width="150"></Image>
+            </Button>
+        </StackPanel>
+
+        <TextBlock 
+            Grid.Row="1" 
+            Name="RatingTxtb"
+            Background="{Binding ElementName=RatingControl,Path=Background}"
+            Width="{Binding ElementName=RatingControl,Path=Width}"
+            Text="{Binding ElementName=RatingControl,Path=RatingText}"
+            FontSize="16"></TextBlock>
+
+    </Grid>
+</UserControl>
