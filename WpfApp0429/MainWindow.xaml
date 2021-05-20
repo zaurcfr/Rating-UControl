@@ -8,19 +8,7 @@
         Title="MainWindow" Height="450" Width="770">
     <Grid>
 
-        <!--<map:Map
-            Name="myMap" 
-            CredentialsProvider="{Binding Provider}" 
-            Mode="AerialWithLabels"
-            ZoomLevel="10"
-            Center="40.409264, 49.867092">
-            
-        </map:Map>-->
         
-        <!--<StackPanel>
-            <local:PlaceHolderTextBox AcceptReturn="False" PlaceHolderText="username"></local:PlaceHolderTextBox>
-            <local:PlaceHolderTextBox AcceptReturn="True" PlaceHolderText="password"></local:PlaceHolderTextBox>
-        </StackPanel>-->
 
         <local:Rating></local:Rating>
 

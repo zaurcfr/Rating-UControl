@@ -34,13 +34,21 @@
             </Button>
         </StackPanel>
 
-        <TextBlock 
-            Grid.Row="1" 
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            
+        <TextBlock  
+            Name="RatingTextblock"
+            Background="{Binding ElementName=RatingControl,Path=Background}"
+            Width="{Binding ElementName=RatingControl,Path=Width}"
+            Text="Your Rating: "
+            FontSize="16"></TextBlock>
+        <TextBlock  
             Name="RatingTxtb"
             Background="{Binding ElementName=RatingControl,Path=Background}"
             Width="{Binding ElementName=RatingControl,Path=Width}"
             Text="{Binding ElementName=RatingControl,Path=RatingText}"
             FontSize="16"></TextBlock>
 
+        </StackPanel>
     </Grid>
 </UserControl>

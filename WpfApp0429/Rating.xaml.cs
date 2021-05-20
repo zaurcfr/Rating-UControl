@@ -21,6 +21,34 @@ namespace WpfApp0429
     public partial class Rating : UserControl
     {
 
+        void Rate(int count,Image myImg)
+        {
+            if (count >= 1)
+            {
+                image1.Source = myImg.Source;
+                RatingTxtb.Text = count.ToString();
+            }
+            if (count >= 2)
+            {
+                image2.Source = myImg.Source;
+                RatingTxtb.Text = count.ToString();
+            }
+            if (count >= 3)
+            {
+                image3.Source = myImg.Source;
+                RatingTxtb.Text = count.ToString();
+            }
+            if (count >= 4)
+            {
+                image4.Source = myImg.Source;
+                RatingTxtb.Text = count.ToString();
+            }
+            if (count >= 5)
+            {
+                image5.Source = myImg.Source;
+                RatingTxtb.Text = count.ToString();
+            }
+        }
 
         public int RatingText
         {
@@ -47,14 +75,14 @@ namespace WpfApp0429
                 BitmapImage imageBitmap = new BitmapImage(imageUri);
                 Image myImage = new Image();
                 myImage.Source = imageBitmap;
-                image1.Source = myImage.Source;
-                RatingText = 1;
-                //if (btn.Content == "Button1") image1.Source = myImage.Source;
-                //else if (btn.Content == "Button2") image2.Source = myImage.Source;
-                //else if (btn.Content == "Button3") image3.Source = myImage.Source;
-                //else if (btn.Content == "Button4") image4.Source = myImage.Source;
-                //else if (btn.Content == "Button5") image5.Source = myImage.Source;
-                
+                //image1.Source = myImage.Source;
+                //RatingText = 1;
+                if (btn.Name == "Button1") Rate(1, myImage);
+                else if (btn.Name == "Button2") Rate(2, myImage);
+                else if (btn.Name == "Button3") Rate(3, myImage);
+                else if (btn.Name == "Button4") Rate(4, myImage);
+                else if (btn.Name == "Button5") Rate(5, myImage);
+
             }
         }
     }
